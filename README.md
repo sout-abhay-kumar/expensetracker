@@ -1,8 +1,9 @@
-# SmartSpend
+# ExpenseTracker
 
 A minimal full-stack personal expense tracker built with React, FastAPI, PostgreSQL and Google Sign-In.
 
 ## Features
+
 - Google Sign-In (Google Identity Services ID-token flow)
 - JWT-protected API
 - Dashboard with income, expenses, balance and recent transactions
@@ -14,16 +15,18 @@ A minimal full-stack personal expense tracker built with React, FastAPI, Postgre
 > Google Sign-In requires a Google OAuth Web Client ID. Telegram and Gmail integrations are intentionally left as future integrations; they are not silently simulated.
 
 ## Requirements
+
 - Node.js 20+
 - Python 3.11+
 - PostgreSQL 15+
 
 ## 1. Configure PostgreSQL
+
 Create a database and user, for example:
 
 ```sql
-CREATE USER smartspend_user WITH PASSWORD 'change_this_password';
-CREATE DATABASE smartspend OWNER smartspend_user;
+CREATE USER expensetracker_user WITH PASSWORD 'change_this_password';
+CREATE DATABASE expensetracker OWNER expensetracker_user;
 ```
 
 ## 2. Backend setup
@@ -39,7 +42,7 @@ Copy-Item .env.example .env
 Edit `backend/.env`:
 
 ```env
-DATABASE_URL=postgresql+psycopg://smartspend_user:change_this_password@localhost:5432/smartspend
+DATABASE_URL=postgresql+psycopg://expensetracker_user:change_this_password@localhost:5432/expensetracker
 JWT_SECRET=replace-with-a-long-random-secret
 GOOGLE_CLIENT_ID=your-google-web-client-id.apps.googleusercontent.com
 FRONTEND_ORIGINS=http://localhost:5173
@@ -60,6 +63,7 @@ uvicorn app.main:app --reload
 API docs: http://127.0.0.1:8000/docs
 
 ## 3. Configure Google Sign-In
+
 1. Open https://console.cloud.google.com/
 2. Create/select a Google Cloud project.
 3. Configure the OAuth consent screen.
@@ -90,6 +94,7 @@ npm run dev
 Open http://localhost:5173.
 
 ## Notes
+
 - The backend creates tables on startup for this starter project. For production, use Alembic migrations.
 - The app stores a hashed Google subject identifier, not a Google password.
 - The Google ID token is verified server-side. The app then issues its own short-lived JWT.
