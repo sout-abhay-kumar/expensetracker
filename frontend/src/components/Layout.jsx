@@ -7,7 +7,6 @@ import {
   Sparkles,
   Menu,
   X,
-  Send,
 } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
@@ -20,7 +19,6 @@ export default function Layout() {
     ["/", "Overview", LayoutDashboard],
     ["/transactions", "Transactions", ArrowLeftRight],
     ["/budgets", "Budgets", Wallet],
-    ["/telegram", "Telegram", Send]
   ];
   return (
     <div className="app-shell">
