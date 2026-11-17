@@ -1,6 +1,6 @@
-# SmartSpend API Documentation
+# ExpenseTracker API Documentation
 
-**API name:** SmartSpend API\
+**API name:** ExpenseTracker API\
 **Version:** 1.0.0\
 **OpenAPI version:** 3.1.0\
 **Backend:** FastAPI\
@@ -14,7 +14,7 @@
 
 ## 1. Overview
 
-The SmartSpend API provides endpoints for:
+The ExpenseTracker API provides endpoints for:
 
 -   Google authentication and retrieving the current user.
 -   Retrieving expense categories.
@@ -637,7 +637,7 @@ You can also use the generated Postman collection to test the endpoints.
 ## 13. Testing with Postman
 
 1.  Start the FastAPI backend.
-2.  Open Postman and import your SmartSpend API collection.
+2.  Open Postman and import your ExpenseTracker API collection.
 3.  Set the `base_url` variable to your backend URL, for example
     `http://localhost:8000`.
 4.  Complete Google login and obtain an application access token.
@@ -669,6 +669,6 @@ Use test records when testing create, update, and delete operations.
 ------------------------------------------------------------------------
 
 **Documentation status:** Generated from the project's OpenAPI 3.1.0
-specification for SmartSpend API version 1.0.0. Verify examples and
+specification for ExpenseTracker API version 1.0.0. Verify examples and
 undocumented response details against the running backend before
 treating them as exact runtime behavior.
